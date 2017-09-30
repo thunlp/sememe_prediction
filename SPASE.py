@@ -91,7 +91,7 @@ print("Training start")
 Sememe_embedding_Matrix = Matrix_Factorization(embedding_matrix,annotation_table,sememe_size)
 
 print("Backuping...")
-with open("result_SPASE","wb") as result:
+with open("model_SPASE","wb") as result:
     pickle.dump(Sememe_embedding_Matrix,result)
 print("Training finish, start evaluating")
 
