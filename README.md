@@ -34,7 +34,7 @@ You can also use pickle library in python to load the files which are named afte
 ## Cite
 If you use the code, please cite this paper:
 
-_Ruobing Xie, Xingchi Yuan, Zhiyuan Liu, Maosong Sun. Lexical Sememe Prediction via Word Embeddings and Matrix Factorization. The 26th International Joint Conference on Artificial Intelligence (IJCAI-17)._
+_Ruobing Xie, Xingchi Yuan, Zhiyuan Liu, Maosong Sun. Lexical Sememe Prediction via Word Embeddings and Matrix Factorization. The 26th International Joint Conference on Artificial Intelligence (IJCAI 2017)._
 
 
 
