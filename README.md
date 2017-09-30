@@ -31,55 +31,11 @@ Feel free to get insight of the files which are named after 'output_', these fil
 
 You can also use pickle library in python to load the files which are named after 'model_'. For more information, please refer to Ensemble_model.py. 
 
-## Citation
-If you use the code, please kindly cite the papers listed in our reference.
+## Cite
+If you use the code, please cite this paper:
+_Ruobing Xie, Xingchi Yuan, Zhiyuan Liu, Maosong Sun. Lexical Sememe Prediction via Word Embeddings and Matrix Factorization. The 26th International Joint Conference on Artificial Intelligence (IJCAI-17)._
 
-## References
-[Auer et al., 2007] S ̈oren Auer, Christian Bizer, Georgi Kobilarov, Jens Lehmann, Richard Cyganiak, and Zachary Ives. Dbpedia: A nucleus for a web of open data. In The semantic web, pages 722–735. Springer, 2007. 
 
-[Bloomfield, 1926] Leonard Bloomfield. A set of postulates for the science of language. Language, 2(3):153–164, 1926. 
-
-[Bobadilla et al., 2013] Jesu ́s Bobadilla, Fernando Ortega, Antonio Hernando, and Abraham Gutie ́rrez. Recommender systems survey. Knowledge-based systems, 46:109–132, 2013. 
-
-[Bollacker et al., 2008] Kurt Bollacker, Colin Evans, Praveen Paritosh, Tim Sturge, and Jamie Taylor. Freebase: a collaboratively created graph database for structuring human knowledge. In Proceedings of KDD, pages 1247–1250, 2008. 
-
-[Dong and Dong, 2006] Zhendong Dong and Qiang Dong. HowNet and The Computation of Meaning. World Scientific, 2006. 
-
-[Duan et al., 2007] Xiangyu Duan, Jun Zhao, and Bo Xu. Word sense disambiguation through sememe labeling. In Proceedings of IJCAI, pages 1594–1599, 2007. 
-
-[Gan and Wong, 2000] Kok Wee Gan and Ping Wai Wong. Annotating information structures in chinese texts using hownet. In Proceedings of ACL, pages 85–92, 2000. 
-
-[Gan et al., 2002] Kok-Wee Gan, Chi-Yung Wang, and Brian Mak. Knowledge-based sense pruning using the hownet: an alternative to word sense disambiguation. In International Symposium on Chinese Spoken Language Processing, 2002. 
-
-[Goddard and Wierzbicka, 1994] Cliff Goddard and Anna Wierzbicka. Semantic and lexical universals: Theory and empirical findings, volume 25. John Benjamins Publishing, 1994. 
-
-[Hinton, 1986] Geoffrey E Hinton. Learning distributed rep- resentations of concepts. In Proceedings of the eighth annual conference of the cognitive science society, volume 1, page 12. Amherst, MA, 1986. 
-
-[Hoffart et al., 2013] Johannes Hoffart, Fabian M Suchanek, Klaus Berberich, and Gerhard Weikum. Yago2: A s- patially and temporally enhanced knowledge base from wikipedia. Artificial Intelligence, 194:28–61, 2013. 
-
-[Huang et al., 2014] Minlie Huang, Borui Ye, Yichen Wang, Haiqiang Chen, Junjun Cheng, and Xiaoyan Zhu. New word detection for sentiment analysis. In Proceedings of ACL, pages 531–541, 2014. 
-
-[Koren et al., 2009] Yehuda Koren, Robert Bell, and Chris Volinsky. Matrix factorization techniques for recommender systems. Computer, 42(8), 2009. 
-
-[Levy and Goldberg, 2014] Omer Levy and Yoav Goldberg. Neural word embedding as implicit matrix factorization. In Proceedings of NIPS, pages 2177–2185, 2014. 
-
-[Liu and Li, 2002] Qun Liu and Sujian Li. Word similarity computing based on how-net. Computational Linguistics and Chinese Language Processing, 7(2):59–76, 2002. 
-
-[Mikolov et al., 2013] Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. Efficient estimation of word representations in vector space. In Proceedings of ICLR, 2013. 
-
-[Miller, 1995] George A Miller. Wordnet: a lexical database for english. Communications of the ACM, 38(11):39–41, 1995. 
-
-[Mintz et al., 2009] Mike Mintz, Steven Bills, Rion Snow, and Dan Jurafsky. Distant supervision for relation extraction without labeled data. In Proceedings of ACL-IJCNLP, pages 1003–1011. Association for Computational Linguistics, 2009. 
-
-[Nastase et al., 2013] Vivi Nastase, Preslav Nakov, Diarmuid O Seaghdha, and Stan Szpakowicz. Semantic relations between nominals. Synthesis Lectures on Human Language Technologies, 6(1):1–119, 2013. 
-
-[Navigli and Ponzetto, 2012] Roberto Navigli and Simone Paolo Ponzetto. Babelnet: The automatic construction, evaluation and application of a wide-coverage multilingual semantic network. Artificial Intelligence, 193:217–250, 2012. 
-
-[Pennington et al., 2014] Jeffrey Pennington, Richard Socher, and Christopher D Manning. Glove: Global vectors for word representation. In EMNLP, volume 14, pages 1532–43, 2014. 
-
-[Rendle, 2010] Steffen Rendle. Factorization machines. In Proceedings of ICDM, pages 995–1000. IEEE, 2010. 
-
-[Sarwar et al.,2001] Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl. Item-based collaborative filtering recommendation algorithms. In Proceedings of World Wide Web, pages 285–295. ACM, 2001. 
 
 
 
