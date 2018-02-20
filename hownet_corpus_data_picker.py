@@ -1,15 +1,15 @@
 import sys;
-reload(sys)
-sys.setdefaultencoding="utf-8"
+#reload(sys)
+#sys.setdefaultencoding="utf-8"
 if (len(sys.argv)<4):
     print('no enough parameter')
     exit();
 hownet_filename = sys.argv[1];
 embedding_filename = sys.argv[2];
 target_filename = sys.argv[3];
-with open(hownet_filename,'r') as hownet:
-    with open(embedding_filename,'r') as embedding:
-        with open(target_filename,'w') as target:
+with open(hownet_filename,'r',encoding='utf-8') as hownet:
+    with open(embedding_filename,'r',encoding='utf-8') as embedding:
+        with open(target_filename,'w',encoding='utf-8') as target:
             wordsBuf = embedding.readlines();
             dim_size = int(wordsBuf[0].strip().split()[1])
             dic = hownet.readlines();

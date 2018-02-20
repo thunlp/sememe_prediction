@@ -16,8 +16,8 @@ question_filename = sys.argv[4];
 target_filename = sys.argv[5]
 target_filename = target_filename.strip().strip('>').strip();
 with open(sememe_embedding_filename,'rb') as sememe_embedding_file:
-    with open(sememe_all_filename,'r') as sememe_all:
-        with open(word_embedding_filename,'r') as embedding_file: 
+    with open(sememe_all_filename,'r',encoding='utf-8') as sememe_all:
+        with open(word_embedding_filename,'r',encoding='utf-8') as embedding_file: 
                 sememe_embeddings = pickle.load(sememe_embedding_file);
                 bias_word = pickle.load(sememe_embedding_file);
                 bias_sememe = pickle.load(sememe_embedding_file)
@@ -55,8 +55,8 @@ with open(sememe_embedding_filename,'rb') as sememe_embedding_file:
                     sem2vec[sememe] = tmpvec;
                     sem2bias[sememe] = bias_sememe[int(index/2)];
                     index += 2;
-                with open(question_filename,'r') as question_file:
-                    with open(target_filename,'w') as output:
+                with open(question_filename,'r',encoding='utf-8') as question_file:
+                    with open(target_filename,'w',encoding='utf-8') as output:
                         for line in question_file:
                             output.write(line.strip()+'\n');
                             score = [];

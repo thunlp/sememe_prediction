@@ -1,13 +1,13 @@
 import sys;
 import math;
-reload(sys)
-sys.setdefaultencoding="utf-8"
+#reload(sys)
+#sys.setdefaultencoding="utf-8"
 if (len(sys.argv)<3):
     print('Insufficient Parameters!');
     exit();
 hownet_filename = sys.argv[1];
 target_filename = sys.argv[2];
-with open(hownet_filename,'r') as hownet:
+with open(hownet_filename,'r',encoding='utf-8') as hownet:
     sememe_all = {};
     data = hownet.readlines();
     words = data[0::2];

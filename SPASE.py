@@ -40,7 +40,7 @@ embedding_filename = sys.argv[3]
 
 sememes = []
 sememe_size = 0
-with open(sememe_all_filename,'r') as sememe_all_file:
+with open(sememe_all_filename,'r',encoding='utf-8') as sememe_all_file:
     sememe_size = int(sememe_all_file.readline())
     sememes = sememe_all_file.readline().strip().strip('[]').split(' ')
     sememes = [x.strip().strip('\'') for x in sememes]
@@ -49,7 +49,7 @@ print("Sememe files reading complete")
 #sememe_all reading complete
 Hownet_dict = {}
 word_dict = {}
-with open(Hownet_filename,'r') as Hownet_file:
+with open(Hownet_filename,'r',encoding='utf-8') as Hownet_file:
     buf = Hownet_file.readlines()
     num = 0
     while (num < len(buf)):
@@ -65,7 +65,7 @@ vector_size = 0
 embedding_matrix = []
 embedding_matrix_all = {} 
 annotation_table = []
-with open(embedding_filename,'r') as embedding_file:
+with open(embedding_filename,'r',encoding='utf-8') as embedding_file:
     buf = embedding_file.readlines()
     num = 0
     word_size,vector_size = [int(x) for x in buf[0].split()]
@@ -96,9 +96,9 @@ with open("model_SPASE","wb") as result:
 print("Training finish, start evaluating")
 
 test_filename = sys.argv[4]
-output_file = open("output_SPASE",'w')
+output_file = open("output_SPASE",'w',encoding='utf-8')
 print(Sememe_embedding_Matrix.shape)
-with open(test_filename,'r') as test_file:
+with open(test_filename,'r',encoding='utf-8') as test_file:
     buf = test_file.readlines()
     num = 0 
     while (num < len(buf)):

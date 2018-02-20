@@ -1,7 +1,7 @@
 import sys;
 import random;
-reload(sys)
-sys.setdefaultencoding="utf-8"
+#reload(sys)
+#sys.setdefaultencoding="utf-8"
 if (len(sys.argv)<3):
     print("no enough parameter");
     exit();
@@ -9,10 +9,10 @@ hownet_filename = sys.argv[1];
 embedding_filename = sys.argv[2];
 answer_filename = hownet_filename+"_answer";
 test_filename = hownet_filename+"_test";
-with open(hownet_filename,'r') as hownet:
-    with open(test_filename,'w') as test:
-        with open(answer_filename,'w') as answer:
-            with open(embedding_filename,'r') as embedding:
+with open(hownet_filename,'r',encoding='utf-8') as hownet:
+    with open(test_filename,'w',encoding='utf-8') as test:
+        with open(answer_filename,'w',encoding='utf-8') as answer:
+            with open(embedding_filename,'r',encoding='utf-8') as embedding:
                 data = hownet.readlines();
                 dataBuf = [];
                 for line in data:
@@ -41,7 +41,7 @@ with open(hownet_filename,'r') as hownet:
                 for word,sememe in samples:
                     test.write(word+'\n');
                     answer.write(word+'\n'+sememe+'\n');
-                with open('train_hownet','w') as train:
+                with open('train_hownet','w',encoding='utf-8') as train:
                     for word,sememe in zip(words,sememes):
                         try:
                             position = samples.index((word,sememe));

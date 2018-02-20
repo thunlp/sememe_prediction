@@ -6,10 +6,14 @@ The code for **Lexical Sememe Prediction via Word Embeddings and Matrix Factoriz
 
 **Storage**: at least 15GB, 20GB or more is recommended. 
 
+**Dependency**: The version of python should be at least 3.5, numpy is needed.
+
 ## How to Run
-1. Prepare a file that contains pre-trained Chinese word embeddings(of Google Word2Vec form).We recommend that the amount of words be at least 200,000 and the number of dimentions be at least 200. It will achieve much better result using a large ( 20GB or more is recommended.) corpus to train your embeddings for running this program.
+1. Prepare a file that contains pre-trained Chinese word embeddings(of Google Word2Vec form). We recommend that the amount of words be at least 200,000 and the number of dimentions be at least 200. It will achieve much better result using a large ( 20GB or more is recommended.) corpus to train your embeddings for running this program.
 
 2. Rename the word embedding file as 'embedding_200.txt' and put it under the directory.
+
+(For application user, then you should prepare a file named as "hownet.txt_test", which lists all the target words(per word per line, in UTF-8 NO BOM encoding). After that, what you should do is to run application_SPWE[SPSE/SPASE].sh and you can leave out the following instructions and get the result in output_SPWE[SPSE/SPASE])
 
 3. Run data_generator.sh, the program will automatically generate evaluation data set and other data files required during training.
 

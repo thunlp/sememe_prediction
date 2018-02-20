@@ -9,8 +9,8 @@ if (len(sys.argv)<3):
 test_filename = sys.argv[1];
 answer_filename = sys.argv[2];
 scores = [];
-with open(test_filename,'r',) as test:
-    with open(answer_filename,'r',) as answer:
+with open(test_filename,'r',encoding='utf-8') as test:
+    with open(answer_filename,'r',encoding='utf-8') as answer:
         while (True):
             test_word = test.readline().strip();
             answer_word = answer.readline().strip();
@@ -33,21 +33,20 @@ with open(test_filename,'r',) as test:
                 continue;
             #print(test_sememes);
             #print(answer_sememes);
-            index = 1;
-            for item in (answer_sememes):
-                try:
-		   #if (index == 1):
-		       #print(item)
-		       #print(answer_sememes);
-		       #print(test_sememes);
-                   rank = test_sememes.index(item);
+            index = 1
+            correct = 0
+            for item in (test_sememes):
+                #try:
+                if (item in answer_sememes):
+                   correct += 1
+    	   #if (index == 1):
+    	       #print(item)
+    	       #print(answer_sememes);
+    	       #print(test_sememes);
                    #print(rank);
-                   point += float(index) / (rank+1);
+                   point += float(correct) / (index);
                    index+=1;
-                except:
-                   point +=0;
-                   index+=1;
-                   continue;
+                #except:
             point /= len(answer_sememes);
             #print(point);
             scores.append(point);
