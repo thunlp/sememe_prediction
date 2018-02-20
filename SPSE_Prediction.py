@@ -63,7 +63,7 @@ with open(sememe_embedding_filename,'rb') as sememe_embedding_file:
                             word = line.strip();
                             vec = np.array(embedding_vec[word]);
                             for sememe in sememes:
-                                score.append((sememe,abs(sem2vec[sememe].dot(vec.transpose()))));
+                                score.append((sememe,sem2vec[sememe].dot(vec.transpose())));
                             score.sort(key=lambda x:x[1],reverse=True);
                             result = [x[0] for x in score];
                             output.write(" ".join((result))+'\n');

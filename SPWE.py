@@ -33,7 +33,7 @@ def ScorerForSememe(target):
         wordvec = embedding_vec[word]
         dotsum = sum([x*y for x,y in zip(wordvec,vec)])
         cosine = dotsum
-        nearestwords.append((word,abs(cosine)))
+        nearestwords.append((word,cosine))
     nearestwords.sort(key=lambda x:x[1],reverse=True)
     nearestwords = nearestwords[0:para_nearest_k+1]
     rank = 1
