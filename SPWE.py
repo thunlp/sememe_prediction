@@ -22,8 +22,8 @@ output_file = None
 def ScorerForSememe(target):
     vec = embedding_vec[target]
     res = copy.deepcopy(sememe_all)
-    for word in res:
-        res[word] = 0
+    #for word in res:
+        #res[word] = 0
     nearestwords = []
     for word in embedding_vec:
         if (word==target):
