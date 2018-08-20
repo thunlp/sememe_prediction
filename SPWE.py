@@ -35,7 +35,7 @@ def ScorerForSememe(target):
         cosine = dotsum
         nearestwords.append((word,cosine))
     nearestwords.sort(key=lambda x:x[1],reverse=True)
-    nearestwords = nearestwords[0:para_nearest_k+1]
+    nearestwords = nearestwords[0:para_nearest_k]
     rank = 1
     for word,cosine in nearestwords:
         sememes = word2sememe[word]
