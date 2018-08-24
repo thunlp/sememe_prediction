@@ -48,6 +48,6 @@ with open(test_filename,'r',encoding='utf-8') as test:
                 index+=1;
                 #except:
             point /= len(answer_sememes);
-            print(point);
+            #print(point);
             scores.append(point);
 print("result:%f" % (sum(scores)/len(scores),));
