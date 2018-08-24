@@ -1,8 +1,8 @@
 from __future__ import division
 from __future__ import print_function
 import sys;
-reload(sys)
-sys.setdefaultencoding='utf-8'
+#reload(sys)
+#sys.setdefaultencoding='utf-8'
 if (len(sys.argv)<3):
     print("not enough parameters!");
     exit();
@@ -35,7 +35,7 @@ with open(test_filename,'r',encoding='utf-8') as test:
             #print(answer_sememes);
             index = 1
             correct = 0
-            for item in (test_sememes):
+            for item in test_sememes:
                 #try:
                 if (item in answer_sememes):
                    correct += 1
@@ -45,9 +45,9 @@ with open(test_filename,'r',encoding='utf-8') as test:
     	       #print(test_sememes);
                    #print(rank);
                    point += float(correct) / (index);
-                   index+=1;
+                index+=1;
                 #except:
             point /= len(answer_sememes);
-            #print(point);
+            print(point);
             scores.append(point);
 print("result:%f" % (sum(scores)/len(scores),));

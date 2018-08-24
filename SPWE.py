@@ -30,6 +30,8 @@ def ScorerForSememe(target):
             continue
         if (word not in word2sememe):
             continue
+        if (word in test_data):
+            continue
         wordvec = embedding_vec[word]
         dotsum = sum([x*y for x,y in zip(wordvec,vec)])
         cosine = dotsum
@@ -54,13 +56,12 @@ def ScorerForSememe(target):
 try:
     embedding_file = open(embedding_filename,"r",encoding='utf-8')
     hownet_file = open(hownet_filename,"r",encoding='utf-8')
-    output_file = open(output_filename,"wb")
+    output_file = open(output_filename,"w",encoding='utf-8')
     test_file = open(test_filename,"r",encoding='utf-8')
 except Exception as e:
     print(e)
 else:
     para_c = 0.8
-    para_lambda = 0.5
     para_nearest_k = 100
 
     word_size = 0
