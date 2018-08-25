@@ -25,13 +25,13 @@ def ScorerForSememe(target):
     #for word in res:
         #res[word] = 0
     nearestwords = []
-    for word in embedding_vec:
+    for word in train_embedding_vec:
         if (word==target):
             continue
         if (word not in word2sememe):
             continue
-        if (word in test_data):
-            continue
+        #if (word in test_data):
+            #continue
         wordvec = embedding_vec[word]
         dotsum = sum([x*y for x,y in zip(wordvec,vec)])
         cosine = dotsum
@@ -105,9 +105,15 @@ else:
     test_data = test_file.readlines()
     checkBuffer = []
     print('Loading test data...')
+    test_words = set()
     for word in test_data:
         if (word.strip() in embedding_vec):
             checkBuffer.append(word.strip())
+            test_words.add(word.strip())
+    train_embedding_vec = dict()
+    for word in embedding_vec:
+        if (word not in test_words):
+            train_embedding_vec[word] = embedding_vec[word]
     test_data=checkBuffer
     print('Test Data Successfully Loaded.')
     print("Initialization Complete.")
