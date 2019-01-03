@@ -21,13 +21,17 @@ with open(hownet_filename,'r',encoding='utf-8') as hownet:
             index = 0;
             diclen = len(dic);
             Strings = [];
+            f = open("hownet_simple","w",encoding='utf-8')
             while(index<diclen):
                 now = dic[index].strip();
                 if (now in words):
                     #target.write(wordsBuf[words[now]]);
                     Strings.append(wordsBuf[words[now]]);
+                    f.write(dic[index])
+                    f.write(dic[index+1])
                 index+=2;
             target.write(str(len(Strings))+" "+str(dim_size)+"\n")
             for line in Strings:
                 target.write(line);
+            f.close()
             

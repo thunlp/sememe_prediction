@@ -117,7 +117,7 @@ else:
     test_data=checkBuffer
     print('Test Data Successfully Loaded.')
     print("Initialization Complete.")
-    model_file = open('model_SPWE','wb')
+    model_file = open('model_SPWE_jhm','wb')
     for line in test_data:
         print("Process:%f" %(float(len(test_list)) / len(test_data)))
         test_list.append(line.strip())

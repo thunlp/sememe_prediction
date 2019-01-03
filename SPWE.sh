@@ -1,2 +1,2 @@
-python SPWE.py train_data train_hownet hownet.txt_test output_SPWE
-python scorer.py output_SPWE hownet.txt_answer
+python SPWE.py train_data_jhm train_hownet_jhm hownet.txt_test_input output_SPWE_jhm
+python scorer.py output_SPWE_jhm hownet.txt_test_answer

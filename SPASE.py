@@ -11,15 +11,15 @@ def Matrix_Factorization(embedding_matrix,annotation_table,sememe_size,epoch = 3
     gradsq_sememe_embedding_matrix = numpy.ones((sememe_size,vector_size))
     weight_matrix = numpy.random.rand(word_size,sememe_size)
     gradsq_weight_matrix = numpy.ones((word_size,sememe_size))
-    for step in xrange(epoch):
+    for step in range(epoch):
         cost = 0;
-        for num in xrange(word_size):
-            for dim in xrange(vector_size):
+        for num in range(word_size):
+            for dim in range(vector_size):
                 weight = numpy.zeros((1,sememe_size))
                 for item in annotation_table[num]:
                     weight[0][item] = weight_matrix[num][item]
                 loss = 0
-                for i in xrange(sememe_size):
+                for i in range(sememe_size):
                     loss += weight[0][i]*sememe_embedding_matrix[i][dim]
                 loss = loss - embedding_matrix[num][dim]
                 cost += loss * loss
@@ -81,7 +81,7 @@ with open(embedding_filename,'r',encoding='utf-8') as embedding_file:
         annotation_table.append(Hownet_dict[word])
         num += 1
 
-embedding_matrix = numpy.array(embedding_matrix).reshape(len(embedding_matrix)/vector_size,vector_size)
+embedding_matrix = numpy.array(embedding_matrix).reshape(int(len(embedding_matrix)/vector_size),vector_size)
 #embedding reading complete
 print("Embedding reading complete")
 
