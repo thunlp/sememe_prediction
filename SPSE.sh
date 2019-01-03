@@ -1,3 +1,3 @@
-python SPSE_Training.py train_hownet_jhm train_data_jhm sememe_all SPSE_embedding_jhm
-python SPSE_Prediction.py SPSE_embedding_jhm sememe_all train_data_jhm hownet.txt_test_input output_SPSE_jhm
-python scorer.py output_SPSE_jhm hownet.txt_test_answer
+python SPSE_Training.py train_hownet train_data sememe_all SPSE_embedding
+python SPSE_Prediction.py SPSE_embedding sememe_all train_data hownet.txt_test_input output_SPSE
+python scorer.py output_SPSE hownet.txt_test_answer
